@@ -1,0 +1,151 @@
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #1e1e2e, #2e2e3e);
+    color: #fff;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+header {
+    background: linear-gradient(135deg, #3b3b4f, #2b2b3f);
+    text-align: center;
+    padding: 3em 0;
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3em;
+}
+
+header p {
+    margin: 0.5em 0;
+    font-size: 1.2em;
+}
+
+.availability {
+    text-align: center;
+    margin: 1em 0;
+    font-size: 1.2em;
+    padding: 1em;
+}
+
+.available {
+    color: green;
+}
+
+.unavailable {
+    color: red;
+}
+
+main {
+    padding: 2em;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.pricing {
+    display: flex;
+    justify-content: space-around;
+    padding: 2em 0;
+    flex-wrap: wrap;
+}
+
+.pricing-option {
+    background: #27273f;
+    padding: 2em;
+    border-radius: 12px;
+    text-align: center;
+    width: 300px;
+    margin: 1em;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.pricing-option:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.5);
+}
+
+.pricing-option h2 {
+    margin: 0;
+    font-size: 1.8em;
+}
+
+.pricing-option p {
+    font-size: 1.5em;
+    margin: 0.5em 0 0;
+}
+
+.form-section {
+    text-align: center;
+    padding: 2em 0;
+}
+
+.form-section form {
+    display: inline-block;
+    text-align: left;
+    background: #3b3b4f;
+    padding: 2.5em;
+    border-radius: 12px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    width: 100%;
+}
+
+form label {
+    display: block;
+    margin-bottom: 0.5em;
+    font-weight: bold;
+}
+
+form input, form select, form button {
+    width: 100%;
+    margin-bottom: 1.2em;
+    padding: 1em;
+    border-radius: 6px;
+    border: none;
+    font-size: 1.2em;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+form input:focus, form select:focus {
+    outline: none;
+    box-shadow: 0 0 5px rgba(255, 107, 107, 0.5);
+}
+
+form button {
+    background: #ff4b4b;
+    color: #fff;
+    cursor: pointer;
+    transition: background 0.3s, transform 0.3s;
+    font-size: 1.2em;
+    padding: 1em;
+}
+
+form button:hover {
+    background: #ff4b4b;
+    background: #ff6b6b;
+    transform: translateY(-2px);
+}
+
+footer {
+    text-align: center;
+    padding: 1em 0;
+    background: linear-gradient(135deg, #3b3b4f, #2b2b3f);
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+}
+
+#alert {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    border-radius: 5px;
+    background: rgba(255, 0, 0, 0.8);
+    color: white;
+    z-index: 1000;
+    display: none;
+    transition: opacity 0.5s ease;
+}

@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Accueil - Rankick</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            font-family: 'Roboto', sans-serif;
+            background: linear-gradient(135deg, #1e1e2e, #2e2e3e);
+            color: #fff;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+        }
+
+        header {
+            background: linear-gradient(135deg, #3b3b4f, #2b2b3f);
+            text-align: center;
+            padding: 3em 0;
+        }
+
+        header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+
+        header p {
+            margin: 0.5em 0;
+            font-size: 1.2em;
+        }
+
+        .availability {
+            text-align: center;
+            margin: 1em 0;
+            font-size: 1.2em;
+            padding: 1em;
+        }
+
+        .available {
+            color: green;
+        }
+
+        .unavailable {
+            color: red;
+        }
+
+        main {
+            padding: 2em;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .spacer {
+            margin: 20px 0;
+        }
+
+        footer {
+            text-align: center;
+            padding: 1em 0;
+            background: linear-gradient(135deg, #3b3b4f, #2b2b3f);
+            box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        button {
+            background: #ff4b4b;
+            color: #fff;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.3s;
+            font-size: 1.2em;
+            padding: 1em;
+            border: none;
+            border-radius: 6px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        button:hover {
+            background: #ff4b4b;
+            background: #ff6b6b;
+            transform: translateY(-2px);
+        }
+
+        .overlay {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.5);
+            z-index: 1000;
+        }
+        
+        /* Existing styles for animations, etc. */
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes slideIn {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+    </style>
+    <script>
+        document.addEventListener('contextmenu', (event) => event.preventDefault());
+        document.addEventListener('keydown', (event) => {
+            if (event.ctrlKey && event.key === 'u') {
+                event.preventDefault();
+            }
+            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+                event.preventDefault();
+            }
+        });
+    </script>
+</head>
+<body>
+    <div class="overlay"></div>
+    
+    <header>
+        <h1>Bienvenue sur Rankick</h1>
+        <p>Veuillez lire les informations ci-dessous avant d'accéder à la page de demande.</p>
+    </header>
+
+    <main>
+<section>
+    <h2>Informations de Paiement</h2>
+    <p>Nous acceptons uniquement les paiements via PayPal.</p>
+    <p>Garantie de remboursement ou satisfait, avec preuves à l'appui.</p>
+    <p>Veuillez noter que le booster peut ne pas être disponible la semaine.</p>
+    <p>Pour que votre demande de boost soit acceptée, veuillez faire la demande sur le serveur et nous contacter. Nous discuterons des demandes et des jours de disponibilité.</p>
+    <p>Rejoignez notre serveur Discord pour plus d'informations et contactez-nous : <a href="https://discord.gg/qfV9y82SD8" target="_blank">Discord Rankick</a></p>
+</section>
+
+
+        <div class="spacer"></div>
+
+        <section>
+            <h2>Propriétaires</h2>
+            <p>Owner: <strong>Popeye.aka</strong> (Discord)</p>
+            <p>Co-Owner: <strong>TikTok.Comm</strong> (Discord)</p>
+        </section>
+
+        <button id="requestButton" onclick="window.location.href='demande.html'">Formulaire</button>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Rankick</p>
+    </footer>
+</body>
+</html>

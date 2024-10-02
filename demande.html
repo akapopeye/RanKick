@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RanKick</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body {
+            user-select: none;
+        }
+        body {
+            -ms-user-select: none;
+        }
+        body {
+            -moz-user-select: none;
+        }
+    </style>
+    <script>
+        document.addEventListener('contextmenu', (event) => event.preventDefault());
+
+    document.addEventListener('keydown', (event) => {
+            if (event.ctrlKey && event.key === 'u') {
+                event.preventDefault();
+            }
+            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
+                event.preventDefault();
+            }
+        });
+    </script>
+</head>
+<body>
+    <header>
+        <h1>RanKick</h1>
+        <p>Remplissez le formulaire ci-dessous :</p>
+    </header>
+
+    <main>
+        <div id="availability" class="availability" style="display: none;"></div>
+        <section class="pricing">
+            <div class="pricing-option" data-priceeur="5" data-pricecad="7">
+                <h2>Élite</h2>
+                <p>5 EUR / 7 CAD</p>
+            </div>
+            <div class="pricing-option" data-priceeur="10" data-pricecad="14">
+                <h2>Champion</h2>
+                <p>10 EUR / 14 CAD</p>
+            </div>
+            <div class="pricing-option" data-priceeur="20" data-pricecad="28">
+                <h2>Unreal</h2>
+                <p>20 EUR / 28 CAD</p>
+            </div>
+        </section>
+        <div class="form-section">
+            <form id="requestForm">
+                <label for="discordName">Nom Discord:</label>
+                <input type="text" id="discordName" placeholder="Nom Discord" required>
+                
+                <label for="fortniteName">Nom Fortnite:</label>
+                <input type="text" id="fortniteName" placeholder="Nom Fortnite" required>
+                
+                <label for="rank">Rang:</label>
+                <select id="rank" required>
+                    <option value="">Choisir un rang</option>
+                    <option value="elite">Élite</option>
+                    <option value="champion">Champion</option>
+                    <option value="unreal">Unreal</option>
+                </select>
+
+                <label for="currencySelect">Devise:</label>
+                <select id="currencySelect" required>
+                    <option value="eur">EUR</option>
+                    <option value="cad">CAD</option>
+                </select>
+
+                <button type="submit">Envoyer</button>
+            </form>
+            <div id="boosterStatus">Booster: idk (Indisponible)</div>
+            <div id="alert" style="display: none; color: red;"></div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; 2024 Rankick</p>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
